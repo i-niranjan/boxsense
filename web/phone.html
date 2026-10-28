@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BoxSense · Phone</title>
+    <style>
+      body { margin: 0; font-family: system-ui, sans-serif; background: #0b0d10; color: #e6e8eb; }
+      #overlay { position: fixed; inset: auto 0 0 0; padding: 16px; display: flex; flex-direction: column; gap: 8px; }
+      button { font-size: 18px; padding: 14px; border-radius: 10px; border: 0; }
+      #start { background: #2563eb; color: white; }
+      #record { background: #374151; color: white; }
+      #record.on { background: #dc2626; }
+      #status { font-size: 14px; background: #000a; padding: 8px; border-radius: 8px; white-space: pre-line; }
+    </style>
+  </head>
+  <body>
+    <!-- Stays visible during the AR session (WebXR dom-overlay). -->
+    <div id="overlay">
+      <div id="status">Not started</div>
+      <button id="record" disabled>● Record</button>
+      <button id="start">Start AR</button>
+    </div>
+    <script type="module" src="/src/phone/phone.js"></script>
+  </body>
+</html>
